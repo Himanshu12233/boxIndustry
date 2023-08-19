@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Box Products</title>
+    <script src="angular.min"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body ng-app="boxApp">
+    <div ng-controller="boxController as ctrl">
+        <!-- Add the search bar and product list here -->
+				<!-- index.html -->
+<div ng-controller="boxController as ctrl">
+    <input type="text" ng-model="ctrl.searchText" placeholder="Search products">
+    <ul>
+        <li ng-repeat="product in ctrl.filteredProducts">{{ product.name }} - {{ product.price | currency }}</li>
+    </ul>
+</div>
+
+    </div>
+</body>
+</html>

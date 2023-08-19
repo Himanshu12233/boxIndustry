@@ -1,0 +1,12 @@
+
+<div ng-controller="boxController as ctrl">
+    <h1>Box Products</h1>
+    <div class="product" ng-repeat="product in ctrl.products">
+        <img ng-src="{{ product.image }}" alt="{{ product.name }}">
+        <div class="details">
+            <h2>{{ product.name }}</h2>
+            <p>{{ product.description }}</p>
+            <p class="price">{{ product.price | currency }}</p>
+        </div>
+    </div>
+</div>
